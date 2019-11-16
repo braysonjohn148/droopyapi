@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
        
         
 
-        $sql = 'INSERT INTO funpagePosts SET posterID =:posterID,
+        $sql = 'INSERT INTO funpageposts SET posterID =:posterID,
             timestamp =:timestamp, url =:url, document =:document, message =:message';
 
         $query = $db ->prepare($sql);
