@@ -3,8 +3,8 @@ class Database{
 
     private $host = "localhost";
     private $db_name = "droopy";
-    private $username = "root";
-    private $password = "";
+    private $username = "droopy";
+    private $password = "droopy";
     public $conn;
   
     // get the database connection
