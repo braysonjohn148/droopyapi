@@ -12,6 +12,9 @@ $data = json_decode(file_get_contents("php://input"));
     if($data != null){
 
         $file = $data -> file;
+        $filetype = $data -> filetype;
+        $extension = $data -> extension;
+
 
 }else{
     echo "error";
@@ -19,14 +22,14 @@ $data = json_decode(file_get_contents("php://input"));
 
     // Get extension
    // $encodedImgString = explode(',', $file, 2)[1];
-$decodedImgString = base64_decode($file);
-$info = getimagesizefromstring($decodedImgString);
+// $decodedImgString = base64_decode($file);
+// $info = getimagesizefromstring($decodedImgString);
 
-echo $info['mime'];
+// echo $info['mime'];
 
 $date = date('YmdHis');
 
-$ImagePath = "uploads/$date.jpg";
+$ImagePath = "uploads/$filetype/$date.$extension";
 
 //$ServerURL = "/droopy/$ImagePath";
 
