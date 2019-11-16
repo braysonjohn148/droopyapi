@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $query = $db ->prepare($sql);
         $query->execute(array(':posterID' => $posterID, ':timestamp' => $timestamp, ':url' => $url, ':document' => $document, 
         ':message' => $message));
-
-        if ($query->execute()) {
+//$query->execute()
+        if ($query) {
             $response["result"] = "success";
             $response["message"] = "Posted Successfully !";
             echo json_encode($response);
