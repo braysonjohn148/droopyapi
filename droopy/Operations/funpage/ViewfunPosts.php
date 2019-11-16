@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 
    // $dbdata[] = array();
 
-    $stmt = $db->query("SELECT * FROM funpagePosts ORDER BY id DESC");
+    $stmt = $db->query("SELECT * FROM funpageposts ORDER BY id DESC");
 // $user = $stmt->fetch();
 while ($row = $stmt->fetch()) {
     $dbdata[] = $row;
