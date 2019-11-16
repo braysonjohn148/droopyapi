@@ -16,7 +16,7 @@ $data = json_decode(file_get_contents("php://input"));
     echo "error";
 }
 
-   $sql = "SELECT * FROM unipostComments WHERE postID = '$postID'";
+   $sql = "SELECT * FROM unipostcomments WHERE postID = '$postID'";
    $statement = $db->prepare($sql);  $statement->execute();  
    $total_rows = $statement->rowCount();
   
