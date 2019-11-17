@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $query->execute(array(':requesterID' => $requesterID, ':sellerID' => $sellerID, ':realtime' => $realtime, ':roomName' => $roomName, 
         ':amount' => $amount, ':itemID' => $itemID));
 
-        if ($query->execute()) {
+        if ($query) {
             $response["result"] = "success";
             $response["message"] = "Ordered Successfully please wait while we give you feedback!";
             echo json_encode($response);
