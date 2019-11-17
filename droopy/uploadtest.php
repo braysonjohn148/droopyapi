@@ -36,6 +36,6 @@ $ImagePath = "uploads/$filetype/$date.$extension";
 file_put_contents($ImagePath,base64_decode($file));
 
 $response["result"] = "success";
-$response["message"] = "http://192.168.6.49/droopy/$ImagePath";
+$response["message"] = "http://167.172.224.251/droopy/$ImagePath";
 echo json_encode($response);
 ?>
