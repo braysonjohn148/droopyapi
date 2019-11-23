@@ -11,12 +11,11 @@ $data = json_decode(file_get_contents("php://input"));
     if($data != null){
 
         $userID = $data -> userID;
-        $otherUserID = $data -> otherUserID;
 }else{
     echo "error";
 }
 
-   $sql ="SELECT * FROM chatwith WHERE userID = '$userID' AND  otherUserID = '$otherUserID'";
+   $sql ="SELECT * FROM chatwith WHERE userID = '$userID'";
    $statement = $db->prepare($sql);  $statement->execute(); 
 
 while ($row = $statement->fetch()) {
