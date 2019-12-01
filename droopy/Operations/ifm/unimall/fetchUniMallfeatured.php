@@ -7,12 +7,6 @@ include_once '../../../DatabaseConnection/databaseconnection.php';
 $database = new Database();
 $db = $database->getConnection();
 
-$data = json_decode(file_get_contents("php://input"));
-
-    if($data != null){
-
-        $category = $data -> category;
-
         
             $sql = "SELECT * FROM unimall WHERE number > 0";
             $statement = $db->prepare($sql);  $statement->execute(); 
@@ -23,10 +17,6 @@ $data = json_decode(file_get_contents("php://input"));
            
            echo json_encode($dbdata);
        
-
-    }else{
-    echo "error";
-    }
 
 
 ?>
