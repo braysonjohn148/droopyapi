@@ -8,7 +8,7 @@ $database = new Database();
 $db = $database->getConnection();
 
 
-    $stmt = $db->query("SELECT * FROM ifmprograms");
+    $stmt = $db->query("SELECT * FROM ifmprograms ORDER BY name");
 while ($row = $stmt->fetch()) {
     $dbdata[] = $row;
 }
