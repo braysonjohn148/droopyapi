@@ -1,6 +1,6 @@
 <?php
 // include database and object files
-include_once '../../DatabaseConnection/databaseconnection.php';
+include_once '../../../DatabaseConnection/databaseconnection.php';
 
  
 // get database connection
