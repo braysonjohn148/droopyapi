@@ -15,6 +15,11 @@ $data = json_decode(file_get_contents("php://input"));
         $subjectname = $data -> subjectname;
         $semister = $data -> semister;
         $year = $data -> year;
+     
+     echo $id;
+     echo $subjectname;
+     echo $semister;
+     echo $year;
 
 }else{
     echo "error";
