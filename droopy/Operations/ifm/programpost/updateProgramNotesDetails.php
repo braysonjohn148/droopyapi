@@ -20,7 +20,7 @@ $data = json_decode(file_get_contents("php://input"));
     echo "error";
 }
 
-$sql = "UPDATE programnotesdetails SET subjectname = '$subjectname'  semister = '$semister' year = '$year' WHERE id = '$id'";
+$sql = "UPDATE programnotesdetails SET subjectname = '$subjectname',  semister = '$semister', year = '$year' WHERE id = '$id'";
 $statement = $db->prepare($sql);  $statement->execute();
 
 
