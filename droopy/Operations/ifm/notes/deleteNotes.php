@@ -8,23 +8,15 @@ $db = $database->getConnection();
 $data = json_decode(file_get_contents("php://input"));
     if($data != null){
         $notesID = $data -> notesID;
-        echo 'done before';
+     
             $sql = "UPDATE notes SET notesID = $notesID+' - Deleted' WHERE notesID = '$notesID'";
             $statement = $db->prepare($sql);   
-           echo 'done after';
-           if($statement->execute()){
+         
+       $statement = $db->prepare($sql);  $statement->execute();
+     
             $response["result"] = "success";
             $response["message"] = "Posted Successfully !";
             echo json_encode($response);
-           }else{
-           
-           
-           $error= $query->errorInfo();
-            echo $error[2];       
-            $response["result"] = "error";
-            $response["message"] = "Ops! an error occured";
-            echo json_encode($response);
-           }
        
     }else{
     echo "error";
