@@ -8,10 +8,10 @@ $db = $database->getConnection();
 $data = json_decode(file_get_contents("php://input"));
     if($data != null){
         $notesID = $data -> notesID;
-        
+        echo 'done before';
             $sql = "UPDATE notes SET notesID = $notesID+' - Deleted' WHERE notesID = '$notesID'";
             $statement = $db->prepare($sql);   
-           
+           echo 'done after';
            if($statement->execute()){
             $response["result"] = "success";
             $response["message"] = "Posted Successfully !";
