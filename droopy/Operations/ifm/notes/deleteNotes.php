@@ -12,7 +12,7 @@ $data = json_decode(file_get_contents("php://input"));
 
      
 
-      $sql = "UPDATE notes SET notesID = '$notesID - Deleted' WHERE notesID = '$notesID' topic = '$topic'";
+      $sql = "UPDATE notes SET notesID = '$notesID - Deleted' WHERE notesID = '$notesID', topic = '$topic'";
       $statement = $db->prepare($sql);  $statement->execute();
       $response["result"] = "success";
       $response["message"] = "Notes Deleted succesfully.";
